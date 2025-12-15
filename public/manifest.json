@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Save Image As Type",
+  "description": "Save images in different formats (JPG, PNG, WebP, GIF, BMP, ICO)",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icons/save-image-as-type.png",
+    "32": "icons/save-image-as-type.png",
+    "48": "icons/save-image-as-type.png",
+    "128": "icons/save-image-as-type.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "downloads",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icons/save-image-as-type.png",
+      "32": "icons/save-image-as-type.png",
+      "48": "icons/save-image-as-type.png",
+      "128": "icons/save-image-as-type.png"
+    },
+    "default_title": "Save Image As Type"
+  }
+}
