@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# build
+dist/
+build/
+
+# cache
+.cache/
+
+# lock_files
+*.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# minified
+*.min.js
+*.min.css
+
+# environment
+.env
+.env.*
